@@ -6,6 +6,10 @@ const navbar = [
     {
         text: 'CSS',
         link: '/css-docs/introduce',
+    },
+    {
+        text: 'JavaScript',
+        link: '/js-docs/primitives-methods'
     }
 ]
 

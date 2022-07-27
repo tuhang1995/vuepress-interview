@@ -14,6 +14,22 @@ function getHtmlDocsSidebar() {
    ] 
 }
 
+function getJsDocsSidebar() {
+    return [
+        {
+            text: '数据类型',
+            collapsible: true,
+            children:[
+                {
+                    text:'原始类型的方法',
+                    link:'/js-docs/primitives-methods'
+                }
+            ],
+        }
+    ]
+}
+
 export const sidebar = {
-    '/html-docs/':getHtmlDocsSidebar()
+    '/html-docs/':getHtmlDocsSidebar(),
+    '/js-docs/': getJsDocsSidebar()
 }
