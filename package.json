@@ -1,0 +1,16 @@
+{
+  "name": "interview",
+  "version": "0.0.1",
+  "description": "personal interview summary",
+  "main": "index.js",
+  "author": "wuyifan <1208097313@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.49"
+  }
+}
