@@ -13,7 +13,7 @@ export default defineUserConfig({
   theme: defaultTheme({
     navbar,
     sidebar,
-    sidebarDepth: 2,
+    // sidebarDepth: 3,
     editLink: true
   })
 
