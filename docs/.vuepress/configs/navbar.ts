@@ -9,7 +9,15 @@ const navbar = [
     },
     {
         text: 'JavaScript',
-        link: '/js-docs/primitives-methods'
+        link: '/js-docs/data-types/primitives-methods'
+    },
+    {
+        text: 'InterView',
+        link: '/interview-docs/javascript'
+    },
+    {
+        text: '精读',
+        link: '/extension-docs/reading'
     }
 ]
 

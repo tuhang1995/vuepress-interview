@@ -1,4 +1,4 @@
----
+<!-- ---
 sidebar: auto
 sidebarDepth: 5
 prev:
@@ -7,8 +7,8 @@ prev:
 next:
   text: GitHub
   link: https://github.com
----
-# 数字类型
+--- -->
+# 原始类型的方法
 
 ## 舍入
   * Math.floor
@@ -194,3 +194,4 @@ Math.random() 会创建一个 0 到 1 之间(不包括1)的随机数
     return min + Math.random() * (max - min)
   }
 ```
+
