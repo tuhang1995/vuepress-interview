@@ -30,6 +30,20 @@ function getJsDocsSidebar() {
                     ]
                 },
                 {
+                    text:'Promise，async/await',
+                    collapsible: true,
+                    children: [
+                        {
+                            link:'/js-docs/promises/callbacks',
+                            text: '回调'
+                        },
+                        {
+                            link:'/js-docs/promises/promise',
+                            text: 'Promise'
+                        }
+                    ]
+                },
+                {
                     text:'杂项',
                     collapsible: true,
                     children: [
@@ -53,16 +67,35 @@ function getInterViewSidebar() {
             children:[
                 {
                     text:'CSS',
-                    link:'/interview-docs/css'
+                    link:'/interview-docs/css/css'
                 },
                 {
                     text:'JavaScript',
-                    link:'/interview-docs/javascript'
+                    link:'/interview-docs/js/javascript'
                 },
                 {
                     text:'Vue',
-                    link:'/interview-docs/vue'
-                }
+                    children: [
+                        {
+                            text: '响应式原理',
+                            link:'/interview-docs/vue/responsive',
+                        }
+                    ]
+                },
+                {
+                    text: 'Http',
+                    link:'/interview-docs/http/http'
+                },
+                {
+                    text: '打包工具',
+                    children: [
+                        {
+                            text: 'Vite与webpack的区别',
+                            link:'/interview-docs/package-tool/vite',
+                        }
+                    ]
+                    // link:'/interview-docs/package-tool/vite'
+                },
                 
             ],
         }
