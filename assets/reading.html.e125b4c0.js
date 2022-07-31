@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-542d547a","path":"/extension-docs/reading.html","title":"\u7CBE\u8BFB","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1659002379000,"contributors":[{"name":"\u6D82\u884C","email":"tuhang@max-optics.com","commits":1}]},"filePathRelative":"extension-docs/reading.md"}');export{e as data};
