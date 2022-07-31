@@ -1,7 +1,7 @@
 ---
-# sidebar: auto
-# sidebarDepth: 3 # 根据页面标题自动生成的侧边栏的最大深度
-# collapsible: true
+sidebar: auto
+sidebarDepth: 3 # 根据页面标题自动生成的侧边栏的最大深度
+#collapsible: true
 # prev:
 #   text: GitHub
 #   link: https://github.com
@@ -136,4 +136,42 @@ __无论用户触发事件多少次，附加的函数在给定的时间间隔内
 3. 用户频繁点击操作
 4. 游戏中的一些设计...
 
+## 事件循环
+
+## js执行机制
+
+## 微任务
+
+## 缓存
+
+## promise的应用场景
+
+## 提高页面性能做了什么
+
+
+## reduce实现数组去重
+```javascript
+const arr = [1,2,3,4,5,6,5,4];
+// reduce语法
+// arr.reduce((prev, cur, index, arr) => {}, init)
+// prev 上次调用回调的返回值
+// cur 当前处理的数组元素
+// index 当前处理元素的索引
+// arr 原数组
+// init 表示初始值 如果不传 为数组第一个值
+const arr2 = arr.reduce((prev, current)=> {
+  if(prev.indexOf(current) === -1) {
+    prev.push(current)
+  }
+  return prev
+}, []);
+
+// arr2 [1,2,3,4,5,6]
+
+// reduce 实现数组求和
+
+const arr3 = arr.reduce((prev, cur) => {
+  return prev + cur
+}, 0)
+```
 

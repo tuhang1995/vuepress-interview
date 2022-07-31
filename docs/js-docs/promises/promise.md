@@ -202,5 +202,72 @@ new Promise((resolve, reject) => {
 
   promise.then(alert)
   ```
+##### 使用promise 重写loadScript
 
-  
+```javascript
+function loadScript(src, callback) {
+  let script = document.createElement('script');
+  script.src = src;
+
+  script.onload = () => callback(null, script);
+  script.onerror = () => callback(new Error(`Script load error for ${src}`));
+
+  document.head.append(script);
+}
+```
+* 重写loadScript
+
+```javascript
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    let script = document.createElement('script');
+    script.src = src;
+    script.onload = resolve(script);
+    script.onerror = reject(new Error (`script load error`))
+    document.head.append(script);
+  })
+}
+
+// 调用
+let promise =  loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js");
+
+promise.then(
+  script => alert('脚本加载成功');
+  error => alert('js加载失败')
+)
+
+promise.then(script => console.log('执行其他的操作'))
+```
+* promise 基于 回调函数的好处
+
+| promise | callback| 
+| - | - |
+| promise允许按照自然规律来进行编码, 运行loadScript和.then来处理结果 | 在调用loadScript时,必须有一个callback函数可供使用, 在调用loadScript之前, 就必须知道如何处理结果|
+| 可以根据需要, 在promise上多次调用.then, 每次会添加一个新的订阅函数| 只能有一个回调| 
+
+
+######  测验
+* 基于 promise 的延时
+函数 delay(ms) 应该返回一个 promise。这个 promise 应该在 ms 毫秒后被 resolve，所以我们可以向其中添加 .then，像这样：
+
+```javascript
+function delay(ms) {
+  // 你的代码
+}
+
+delay(3000).then(() => alert('runs after 3 seconds'));
+```
+::: details 点击查看代码
+```javascript
+function delay(ms) {
+  return new Promise((resolve, reject)=> {
+    setTimeout(()=> {
+      resolve()
+    }, ms)
+  } )
+}
+```
+
+:::
+
+ 

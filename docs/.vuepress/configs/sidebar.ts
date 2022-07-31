@@ -40,7 +40,11 @@ function getJsDocsSidebar() {
                         {
                             link:'/js-docs/promises/promise',
                             text: 'Promise'
-                        }
+                        },
+                        {
+                          link:'/js-docs/promises/promise-chaining',
+                          text: 'Promise链'
+                      }
                     ]
                 },
                 {
@@ -96,6 +100,10 @@ function getInterViewSidebar() {
                     ]
                     // link:'/interview-docs/package-tool/vite'
                 },
+                {
+                  text: '包管理工具',
+                  link: '/interview-docs/package/package'
+                }
                 
             ],
         }

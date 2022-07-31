@@ -17,10 +17,18 @@ export default defineUserConfig({
       getExtraFields: (page) => page.frontmatter.tags ?? [],
     }),
   ],
+  
+  
   theme: defaultTheme({
     navbar,
     sidebar,
     sidebarDepth: 3,
     editLink: true,
+    docsRepo: 'https://github.com/tuhang1995/vuepress-interview',
+    docsBranch: 'master',
+    docsDir: 'docs',
+    
+    editLinkText: '在 Github 上编辑此页',
+    editLinkPattern: ':repo/tree/:branch/:path',
   }),
 })

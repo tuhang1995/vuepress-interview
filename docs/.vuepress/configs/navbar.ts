@@ -45,6 +45,11 @@ const navbar = [
                 text: '打包工具',
                 link: '/interview-docs/package-tool/vite'
             },
+            {
+              text: '包管理',
+              link: '/interview-docs/package/package'
+            },
+          
         ]
     },
     {
